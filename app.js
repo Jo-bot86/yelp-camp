@@ -88,7 +88,7 @@ app.put('/campgrounds/:id',validateCampground ,catchAsync(async (req, res) => {
   const editedCampground = req.body.campground;
   console.log(id);
   await Campground.findByIdAndUpdate(id, editedCampground);
-  res.redirect(`/campgrounds/${id}`); 
+  res.redirect(`/campgrounds/${id}`);
 }));
 
 app.post('/campgrounds',validateCampground ,catchAsync(async (req, res) => {
