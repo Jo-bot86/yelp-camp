@@ -1,6 +1,6 @@
 <%- layout('layouts/boilerplate') %>
 <h1>Are you sure you want to delete the <%= campground.title %> Campground</h1>
 <form action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
-  <button type="submit">Confirm</button>
+  <button class="btn btn-danger" type="submit">Delete</button>
 </form>
 <a href="/campgrounds/<%= campground._id %>">Cancel</a>
